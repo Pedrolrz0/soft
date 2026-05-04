@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar-container">
+    <div class="logo">Royal Music</div>
+    
+    <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="https://www.cifraclub.com.br/" target="_blank">Serviço Desktop</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.studiosol.cifraclub" target="_blank">Serviço Mobile</a></li>
+        <li><a href="#contato">Contatos</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h3>Bem-Vindo ao Royal Music</h3>
+    <h4>Aulas de Instrumentos e Sua Trajetória de Aprendizado</h4>
+</section>
+
+<main>
+    <h1>Introdução</h1>
+    <img src="./img/imagem.jpg" alt="Pessoa tocando instrumento musical">
+    
+    <p> 
+        "Acredito que nunca é tarde (ou cedo demais) para descobrir a música. Meu foco é mostrar que tirar os primeiros sons do seu instrumento 
+        pode ser muito mais simples e divertido do que você imagina. Com paciência e um passo a passo descomplicado, transformo aquele sonho 
+        antigo de tocar em uma realidade prazerosa. Vamos dar o primeiro acorde juntos?" 
+        Irei mostrá-lo as principais opções que costumam brilhar mais os olhos da maioria e te mostrar como aprender vale a pena. 
+    </p>
+
+    <div style="text-align: center;">
+        <a href="https://www.encorda.com.br/blog/instrumentos-da-familia-das-cordas/" class="btn-padrao">História</a>
+    </div>
+
+    <h2>Jornada Instrumental</h2>
+    <ol>
+        <li>Violão: Harmonia pura e acústica. O companheiro clássico para voz, MPB e dedilhados suaves.</li>
+        <li>Guitarra: Versatilidade e potência. Depende de amplificação e brilha com efeitos e solos.</li>
+        <li>Teclado: Orquestra em mãos. Simula pianos, órgãos e sintetizadores; ideal para criar texturas.</li>
+        <li>Ukulele: Portabilidade e leveza. Quatro cordas, som brilhante e perfeito para ritmos descontraídos.</li>
+        <li>Bateria: O motor da música. Responsável por manter o tempo e a energia rítmica.</li>
+    </ol>
+
+    <div class="card-repertorio">
+        <h2>Repertório Inicial</h2>
+        <p>Não tente tocar sua música favorita se ela for complexa demais.</p>
+        <p>Procure músicas com 2 ou 3 acordes ou batidas.</p>
+        <p>O objetivo aqui é manter o tempo e a fluidez, não a velocidade.</p>
+    </div>
+
+    <video controls class="video-responsivo">
+        <source src="./videos/video.mp4" type="video/mp4">
+        <track label="Português" kind="subtitles" srclang="pt" src="legendas.vtt" default>
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <div style="overflow-x: auto;"> <table>
+            <thead>
+                <tr>
+                    <th>Instrumento</th>
+                    <th>Dificuldade Inicial</th>
+                    <th>Custo Médio</th>
+                    <th>Portabilidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Violão</td><td>Média</td><td>R$400 - R$900</td><td>Alta</td></tr>
+                <tr><td>Guitarra</td><td>Alta</td><td>R$700 - R$1200</td><td>Alta</td></tr>
+                <tr><td>Teclado</td><td>Média</td><td>R$800 - R$2000</td><td>Média</td></tr>
+                <tr><td>Ukulele</td><td>Baixa</td><td>R$150 - R$400</td><td>Muito Alta</td></tr>
+                <tr><td>Bateria</td><td>Alta</td><td>R$1500 - R$5000</td><td>Baixa</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <form class="contato-form">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem: </label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            
+            <button type="submit" class="btn-enviar">Enviar</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Siga-nos nas redes sociais:</p>
+    <ul class="social-links">
+        <li><a href="https://www.facebook.com/share/1AfdSeN2A9" class="fb-link">Facebook</a></li>
+        <li><a href="https://www.instagram.com/_pedrolrz?igsh=amQ1ZDYzYnYxOTNs" class="ig-link">Instagram</a></li>
+    </ul>
+    <p>&copy; 2026 Empresa de Aulas Musicais ES - Seu lugar é aqui.</p>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+</script>
+
+</body>
+</html>
