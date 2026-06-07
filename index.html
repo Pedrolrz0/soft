@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Royal Music</title>
     <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="dark-scroll.css">
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -68,7 +69,8 @@
         Seu navegador não suporta a tag de vídeo.
     </video>
 
-    <div style="overflow-x: auto;"> <table>
+    <div style="overflow-x: auto;">
+        <table>
             <thead>
                 <tr>
                     <th>Instrumento</th>
@@ -113,22 +115,7 @@
     <p>&copy; 2026 Empresa de Aulas Musicais ES - Seu lugar é aqui.</p>
 </footer>
 
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-</script>
+<!-- O script inline foi removido daqui. Todo o JS está no script.js -->
 
 </body>
 </html>
